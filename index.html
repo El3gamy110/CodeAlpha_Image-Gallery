@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Gallery</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header class="header">
+        <h1>Image Gallery</h1>
+        <p class="subtitle">Explore our curated collection of stunning photography</p>
+    </header>
+
+    <main class="container">
+        <!-- Category Filter -->
+        <nav class="filter-nav" aria-label="Category Filter">
+            <button class="filter-btn active" data-filter="all">All</button>
+            <button class="filter-btn" data-filter="nature">Nature</button>
+            <button class="filter-btn" data-filter="architecture">Architecture</button>
+            <button class="filter-btn" data-filter="animals">Animals</button>
+            <button class="filter-btn" data-filter="Art">Art</button>
+        </nav>
+
+        <!-- Gallery Grid -->
+        <div class="gallery-grid" id="gallery-grid">
+            <!-- Images will be injected here by JavaScript -->
+        </div>
+    </main>
+
+    <!-- Lightbox Modal -->
+    <div class="lightbox" id="lightbox" aria-hidden="true">
+        <div class="lightbox-overlay"></div>
+        <div class="lightbox-content">
+            <button class="lightbox-close" aria-label="Close lightbox">&times;</button>
+            
+            <div class="lightbox-image-container">
+                <button class="lightbox-nav prev" aria-label="Previous image">&#10094;</button>
+                
+                <figure class="lightbox-figure">
+                    <img src="" alt="" class="lightbox-img" id="lightbox-img">
+                    <figcaption class="lightbox-caption" id="lightbox-caption"></figcaption>
+                </figure>
+
+                <button class="lightbox-nav next" aria-label="Next image">&#10095;</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
